@@ -8,7 +8,7 @@ const classAssigner = () => {
         classObjects[element] = document.querySelector(`.${element}`)
     })
 
-    console.log(classObjects);
+    //console.log(classObjects);
     return classObjects;
 }
 

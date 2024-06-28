@@ -7,6 +7,12 @@ const ids = idAssigner();
 
 
 
+function getWeatherJSON(location) {
+    const weatherJSON = weatherFetcher(location)
+    return weatherJSON
+}
+
+
 
 
 
