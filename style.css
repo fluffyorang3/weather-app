@@ -69,22 +69,8 @@ input {
     text-align: center;
 }
 
-#day1:before {
-    content:'Today';
-}
-
-#day2:before {
-    content:'Tomorrow';
-}
-
-
-#day3:before {
-    content:'30/06';
-}
-
-
-#day4:before {
-    content:'01/07';
+.time {
+    text-align: center;
 }
 
 

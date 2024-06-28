@@ -1,4 +1,6 @@
-import classAssigner from "./contentAssigner.js";
+import {classAssigner, idAssigner} from "./contentAssigner.js";
 
-classAssigner();
+const classes = classAssigner();
+const ids = idAssigner();
 
+classes.condition.textContent = "Partly cloudy"
