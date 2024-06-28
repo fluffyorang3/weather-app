@@ -3,7 +3,7 @@ import weatherFetcher from "./weatherFetcher.js";
 
 const handler = function submitHandler() {
     
-    function newLocation(result) {
+    function mapLocation(result) {
         return {
             'condition': result.current.condition.text,
             'icon': result.current.condition.icon,
@@ -43,9 +43,34 @@ const handler = function submitHandler() {
             (result) => {
                 console.log(result)
                 console.log(classAssigner())
-                const mmm = newLocation(result)
-                console.log(mmm)
+                console.log(idAssigner())
+                const createLocation= mapLocation(result)
+                console.log(createLocation)
+                
+                classAssigner().condition.textContent = createLocation.condition
+                classAssigner()['day-forecast-icon'].style.backgroundImage = `url(${createLocation.icon})`
+                classAssigner().icon.style.backgroundImage = `url(${createLocation.icon})`
+                classAssigner().location.textContent = createLocation.location
+                classAssigner().degree.textContent = String(createLocation['degree-c']).slice(0, -2)
+
+                idAssigner()['day-forecast-icon-2'].style.backgroundImage = `url(${createLocation.icon2})`
+                idAssigner()['day-forecast-icon-3'].style.backgroundImage = `url(${createLocation.icon3})`
+                idAssigner()['day-forecast-icon-4'].style.backgroundImage = `url(${createLocation.icon4})`
+                
+                idAssigner()['low-1'].textContent = createLocation.mintemp1
+                idAssigner()['low-2'].textContent = createLocation.mintemp2
+                idAssigner()['low-3'].textContent = createLocation.mintemp3
+                idAssigner()['low-4'].textContent = createLocation.mintemp4
+
+                idAssigner()['high-1'].textContent = createLocation.maxtemp1
+                idAssigner()['high-2'].textContent = createLocation.maxtemp2
+                idAssigner()['high-3'].textContent = createLocation.maxtemp3
+                idAssigner()['high-4'].textContent = createLocation.maxtemp4
+
+                idAssigner()['time-3'].textContent = (createLocation.date3).slice(5)
+                idAssigner()['time-4'].textContent = (createLocation.date4).slice(5)
             },
+
             (error) => {
                 console.error(error)
             }

@@ -90,6 +90,7 @@ input {
 .temp {
     height: 70%;
     display: flex;
+    gap: 20px;
 }
 
 .degree,
