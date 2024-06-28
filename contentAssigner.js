@@ -1,6 +1,8 @@
 const classAssigner = () => {
-    const elements = ['location', 'degree', 'sign', 'condition', 'day-forecast-icon']
+    const elements = ['location', 'degree', 'sign', 'condition', 'day-forecast-icon', 'icon']
     const classObjects = {}
+
+
 
     elements.forEach((element) => {
         classObjects[element] = document.querySelector(`.${element}`)
@@ -12,6 +14,8 @@ const classAssigner = () => {
 
 const idAssigner = () => {
     const idObjects = {};
+
+    idObjects['locationForm'] = document.getElementById('locationForm')
     
     for(let i = 1; i < 5; i++) {
         idObjects[`time-${i}`] =document.querySelector(`#day${i} .time`)
@@ -22,7 +26,7 @@ const idAssigner = () => {
         idObjects[`high-${i}`] = document.querySelector(`#day${i} .low-and-high .high`)
     }
 
-    console.log(idObjects)
+    //console.log(idObjects)
     return idObjects;
 }
 

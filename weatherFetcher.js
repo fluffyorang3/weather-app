@@ -12,15 +12,15 @@ const weatherFetcher = async (location) => {
 
     const URL = getUrl(location)
 
-    console.log(URL)
+    //console.log(URL)
 
     async function getLocationJSON() {
         const response = await fetch(URL)
         const weatherData = await response.json()
-        console.log(weatherData)
+        return weatherData;
     }
 
-    getLocationJSON()
+    return getLocationJSON()
 
 }
 
