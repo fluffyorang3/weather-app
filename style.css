@@ -1,3 +1,196 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
 * {
-    color: blue;
+    //outline: red solid;
+    color: white;
+    font-family: 'Roboto', sans-serif;
 }
+
+body {
+    margin: 0px;
+}
+
+input {
+    width: 400px;
+    height: 30px;
+    border-radius: 10px;
+    text-align: center;
+}
+
+
+.container {
+    background-image: url("./assets/overcast-background.jpg");
+    width: 100%;
+    height: 100vh;
+    background-size: 100%;
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.content {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    height: 80%;
+    width: 70%;
+    min-width: 600px;
+    min-height: 500px;
+    padding: 30px;
+    gap: 30px;
+}
+
+#info-and-icon {
+    box-sizing: border-box;
+    height: 40%;
+    width: 80%;
+    display: flex;
+    justify-content: center;
+}
+
+.days-forecast {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    width: 80%;
+    gap: 20px;
+}
+
+.day-forecast {
+    width: 150px;
+    height: 150px;
+    display: flex;
+    flex-direction: column;
+}
+
+.day-forecast:before {
+    text-align: center;
+}
+
+#day1:before {
+    content:'Today';
+}
+
+#day2:before {
+    content:'Tomorrow';
+}
+
+
+#day3:before {
+    content:'30/06';
+}
+
+
+#day4:before {
+    content:'01/07';
+}
+
+
+.location-temp,
+.icon {
+    width: 50%;
+}
+
+.location {
+    height: 20%;
+    font-weight: bold;
+    font-size: 25px;
+    align-content: center;
+    text-align: center;
+}
+
+.temp {
+    height: 70%;
+    display: flex;
+}
+
+.degree,
+.sign {
+    width: 50%;
+    align-content: center;
+    text-align: center;
+    font-size: 100px;
+    font-weight: bold;  
+}
+
+.degree {
+    text-align: end;
+}
+
+.sign {
+    text-align: start;
+}
+
+.icon {
+    width: 200px;
+    height: 100%;
+    background-image: url('./assets/icon-test.png');
+    background-size: 200px;
+    background-repeat: no-repeat;
+    background-position: center
+}
+
+.condition {
+    text-align: center;
+    font-size: 20px;
+}
+
+.day-forecast-icon {
+    height: 80%;
+    width: 100%;
+    background-image: url('./assets/icon-test.png');
+    background-size: 90px;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.low-and-high {
+    display: flex;
+    justify-content: space-evenly;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.content,
+input {
+    box-shadow: 0 0 1rem 0 rgba(0, 0, 0, .2); 
+    border-radius: 10px;
+    position: relative;
+    z-index: 1;
+    background: inherit;
+    overflow: hidden;
+    border-style: solid;
+    border-color: rgba(255, 255, 255, 0.6);
+    border-width: 1px;
+
+  }
+  
+  .content:before,
+  .input:before {
+    content: "";
+    position: absolute;
+    background: inherit;
+    z-index: -1;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    box-shadow: inset 0 0 2000px rgba(145, 145, 145, 0.5);
+    filter: blur(10px) brightness(30%);
+    margin: -20px;
+  }

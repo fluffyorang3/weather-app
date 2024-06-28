@@ -4,10 +4,60 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Weather App</title>
-    <script src="index.js" defer></script>
+    <script src="index.js" type="module" defer></script>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <h1>Weather app</h1>
+    <div class="container">
+        <div class="content">
+            <div id="search-bar">
+                <form id="locationForm">
+                    <input type="submit" hidden>
+                    <input type="text" id="location" name="location" placeholder="Search location">
+                </form>
+            </div>
+            <div id="info-and-icon">
+                <div class="location-temp">
+                    <div class="location">Tirana</div>
+                    <div class="temp">
+                        <div class="degree">19</div>
+                        <div class="sign">°C</div>
+                    </div>
+                    <div class="condition">Partly Cloudy</div>
+                </div>
+                <div class="icon"></div>
+            </div>
+            <div class="days-forecast">
+                <div id="day1" class="day-forecast">
+                    <div class="day-forecast-icon"></div>
+                    <div class="low-and-high">
+                        <div class="low">low</div>
+                        <div class="high">high</div>
+                    </div>
+                </div>
+                <div id="day2" class="day-forecast">
+                    <div class="day-forecast-icon"></div>
+                    <div class="low-and-high">
+                        <div class="low">low</div>
+                        <div class="high">high</div>
+                    </div>
+                </div>
+                <div id="day3" class="day-forecast">
+                    <div class="day-forecast-icon"></div>
+                    <div class="low-and-high">
+                        <div class="low">low</div>
+                        <div class="high">high</div>
+                    </div>
+                </div>
+                <div id="day4" class="day-forecast">
+                    <div class="day-forecast-icon"></div>
+                    <div class="low-and-high">
+                        <div class="low">low</div>
+                        <div class="high">high</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
 </body>
 </html>
